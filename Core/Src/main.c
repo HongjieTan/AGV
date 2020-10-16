@@ -254,8 +254,9 @@ int main(void)
 				switch(sysTaskIndex)
 				{
 					case 0:
+						CAN->sTxMailBox[0].TIR |= CAN_TI0R_TXRQ;
 						userCanPollRoutineF(&hcan);
-						CAN->sTxMailBox[2].TIR |= CAN_TI0R_TXRQ;
+						
 						// 5ms  task1(); 
 						break;
 					
@@ -270,8 +271,8 @@ int main(void)
 						break;
 					
 					case 3:
+						CAN->sTxMailBox[2].TIR |= CAN_TI0R_TXRQ;
 						userCanPollRoutineF(&hcan);
-						CAN->sTxMailBox[0].TIR |= CAN_TI0R_TXRQ;
 						break;
 
 					default:

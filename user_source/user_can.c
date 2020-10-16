@@ -22,7 +22,7 @@
 #define txAddress3     0x601UL
 
 #define rxAddress1     0x581UL
-#define rxAddress2     0x7d2UL
+#define rxAddress2     0x701UL
 /* Private variables ---------------------------------------------------------*/
 canConfigMatrixT canConfigG[5] = 
 {
